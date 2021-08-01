@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--HTML5-->
+
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{title}}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+    {% block css %}{% endblock %}
+</head>
+
+<body>
+    <!-- Start Top Nav Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">My Neighborhood</li>
+            <li><a href="/">Today</a></li>
+            <li><a href="/feed/">Events</a></li>
+            <li><a href="/feed/">Resources</a></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="dropdown menu" data-dropdown-menu>
+            {% if user.is_authenticated %}
+            Welcome {{ user.username }}
+            <li><a href="/logout/">Logout</a></li>
+            {% else %}
+            <li>Hello, Guest</li>
+            <li><a href="/login/">Login</a></li>
+            {% endif %}
+          </ul>
+          <!--<ul class="menu">
+            {% if user.is_authenticated %}
+                Welcome {{ user.username }}
+            {% else %}
+                Welcome Guest
+            {% endif %}
+          </ul>
+          <ul class="menu">
+            <li><a href="#">Account</a></li>
+            <li><a href="http://localhost:8000/signon.html" class="button">Sign</button></a></li>
+            <li><a href="http://localhost:8000/signon.html" class="button">LinkButtonTest</a></li>
+            <li><button type="button" class="alert button">ActionButtonTest</button></li>
+          </ul>-->
+        </div>
+    </div>
+    <!-- End Top Nav Bar -->
+
+
+    {% block content %}{{body}}{% endblock %}
+    <script src="{% static 'js/vendor.js' %}"></script>
+    <script src="{% static 'js/foundation.js' %}"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+
+</html>

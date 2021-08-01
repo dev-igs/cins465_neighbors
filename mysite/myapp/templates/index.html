@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+<!--Start Form Container -->
+    <div class="grid-container">
+
+        <h5>Form Submission</h5>
+        <iframe title="Example 3" height="230" src="https://widget.airnow.gov/aq-dial-widget/?city=Imperial&state=CA&country=USA" style="border: none; border-radius: 25px;" width="230"></iframe>
+        {% if user.is_authenticated %}
+        <form action="/" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <label for="submitbutton" class="button">Submit</label>
+            <input type="submit" id="submitbutton" class="show-for-sr">
+        </form>
+        {% endif %}
+
+
+{% endblock %}
