@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} {{title}} {% endblock %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/app.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="grid-container">
+<div class="work-feature-block row">
+  <div class="columns medium-7">
+    <img class="work-feature-block-image" src="https://images.unsplash.com/photo-1615253938517-3a73944bbe64?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"/>
+  </div>
+  <div class="columns medium-5">
+    <h2 class="work-feature-block-header">About Us</h2>
+    <p> In an effort to provide useful information to the community, this webiste provides an easy way to find the details you need</p>
+    <h2>Providing</h2>
+    <ul>
+      <li>Aggregated Local News</li>
+      <li>Local Events</li>
+      <li>Community Resources</li>
+      <li>Get help from us by using out Chat!</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+{% block scripts %}
+    <script src="{% static 'js/app.js' %}"></script>
+{% endblock %}
+
+{% endblock %}

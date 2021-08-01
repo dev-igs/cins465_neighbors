@@ -1,0 +1,140 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %} {{title}} {% endblock %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/app.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="grid-container">
+    <section class="filter-simple">
+        <div class="button-group round">
+            <button class="button hollow filter-simple-button is-active" data-filter="all">All</button>
+            <button class="button hollow filter-simple-button" data-filter="health">Health</button>
+            <button class="button hollow filter-simple-button" data-filter="support">Support</button>
+            <button class="button hollow filter-simple-button" data-filter="housing">Housing</button>
+        </div>
+        <div class="grid-x grid-margin-x" >
+                <div class="card filter-simple-item health" style="width: 300px;">
+                    <img src="https://www.icphd.org/media/managed/aboutus/Logo_Trans_Background.png" width="100" height="100">
+                    <div class="card-section">
+                        <h5>Organization Name</h5>
+                        <p>123 Address St</p>
+                        <p>email@test.com</p>
+                        <p>123-456-7890</p>
+                        <p>www.Link.org</p>
+                        <p>Tags</p>
+                    </div>
+                </div>
+                <div class="card filter-simple-item support" style="width: 300px;">
+                    <img src="https://www.icphd.org/media/managed/aboutus/Logo_Trans_Background.png" width="100" height="100">
+                    <div class="card-section">
+                        <h5>Organization Name</h5>
+                        <p>123 Address St</p>
+                        <p>email@test.com</p>
+                        <p>123-456-7890</p>
+                        <p>www.Link.org</p>
+                        <p>Tags</p>
+                    </div>
+                </div>
+                <div class="card filter-simple-item housing">
+                    <img src="https://www.icphd.org/media/managed/aboutus/Logo_Trans_Background.png" width="100" height="100">
+                    <div class="card-section">
+                        <h5>Organization Name</h5>
+                        <p>123 Address St</p>
+                        <p>email@test.com</p>
+                        <p>123-456-7890</p>
+                        <p>www.Link.org</p>
+                        <p>Tags</p>
+                    </div>
+                </div>
+                <div class="card filter-simple-item housing">
+                    <img src="https://www.icphd.org/media/managed/aboutus/Logo_Trans_Background.png" width="100" height="100">
+                    <div class="card-section">
+                        <h5>Organization Name</h5>
+                        <p>123 Address St</p>
+                        <p>email@test.com</p>
+                        <p>123-456-7890</p>
+                        <p>www.Link.org</p>
+                        <p>Tags</p>
+                    </div>
+                </div>
+                <div class="card filter-simple-item housing">
+                    <img src="https://www.icphd.org/media/managed/aboutus/Logo_Trans_Background.png" width="100" height="100">
+                    <div class="card-section">
+                        <h5>Organization Name</h5>
+                        <p>123 Address St</p>
+                        <p>email@test.com</p>
+                        <p>123-456-7890</p>
+                        <p>www.Link.org</p>
+                        <p>Tags</p>
+                    </div>
+                </div>
+                <div class="card filter-simple-item housing">
+                    <img src="https://www.icphd.org/media/managed/aboutus/Logo_Trans_Background.png" width="100" height="100">
+                    <div class="card-section">
+                        <h5>Organization Name</h5>
+                        <p>123 Address St</p>
+                        <p>email@test.com</p>
+                        <p>123-456-7890</p>
+                        <p>www.Link.org</p>
+                        <p>Tags</p>
+                    </div>
+                </div>
+                <div class="card filter-simple-item housing">
+                    <img src="https://www.icphd.org/media/managed/aboutus/Logo_Trans_Background.png" width="100" height="100">
+                    <div class="card-section">
+                        <h5>Organization Name</h5>
+                        <p>123 Address St</p>
+                        <p>email@test.com</p>
+                        <p>123-456-7890</p>
+                        <p>www.Link.org</p>
+                        <p>Tags</p>
+                    </div>
+                </div>
+                <div class="card filter-simple-item housing">
+                    <img src="https://www.icphd.org/media/managed/aboutus/Logo_Trans_Background.png" width="100" height="100">
+                    <div class="card-section">
+                        <h5>Organization Name</h5>
+                        <p>123 Address St</p>
+                        <p>email@test.com</p>
+                        <p>123-456-7890</p>
+                        <p>www.Link.org</p>
+                        <p>Tags</p>
+                    </div>
+                </div>
+                <div class="card filter-simple-item housing">
+                    <img src="https://www.icphd.org/media/managed/aboutus/Logo_Trans_Background.png" width="100" height="100">
+                    <div class="card-section">
+                        <h5>Organization Name</h5>
+                        <p>123 Address St</p>
+                        <p>email@test.com</p>
+                        <p>123-456-7890</p>
+                        <p>www.Link.org</p>
+                        <p>Tags</p>
+                    </div>
+                </div>
+                <div class="card filter-simple-item housing">
+                    <img src="https://www.icphd.org/media/managed/aboutus/Logo_Trans_Background.png" width="100" height="100">
+                    <div class="card-section">
+                        <h5>Organization Name</h5>
+                        <p>123 Address St</p>
+                        <p>email@test.com</p>
+                        <p>123-456-7890</p>
+                        <p>www.Link.org</p>
+                        <p>Tags</p>
+                    </div>
+                </div>
+        </div>
+    </section>
+</div>
+
+{% block scripts %}
+    <script src="{% static 'js/app.js' %}"></script>
+{% endblock %}
+
+{% endblock %}

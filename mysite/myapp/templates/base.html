@@ -1,9 +1,7 @@
 {% load static %}
-
 <!DOCTYPE html>
 <!--HTML5-->
-
-<html class="no-js" lang="en">
+<html>
 
 <head>
     <meta charset="utf-8" />
@@ -15,49 +13,34 @@
 </head>
 
 <body>
-    <!-- Start Top Nav Bar -->
+    <!--nav bar start-->
+
     <div class="top-bar">
         <div class="top-bar-left">
           <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">My Neighborhood</li>
-            <li><a href="/">Today</a></li>
-            <li><a href="/feed/">Events</a></li>
-            <li><a href="/feed/">Resources</a></li>
+            <a href="#"></a><img src="{% static 'images/noun_love house_3971660.png' %}" width="50" height="50"/></a>
+            <li><a class="menu-text">Neighbors</a></li>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li><a href="/events/">Events</a></li>
+            <li><a href="/resources/">Community Resources</a></li>
+            <li><a href="/about/">About</a></li>
           </ul>
         </div>
         <div class="top-bar-right">
-          <ul class="dropdown menu" data-dropdown-menu>
-            {% if user.is_authenticated %}
-            Welcome {{ user.username }}
-            <li><a href="/logout/">Logout</a></li>
-            {% else %}
-            <li>Hello, Guest</li>
-            <li><a href="/login/">Login</a></li>
-            {% endif %}
+          <ul class="menu"> 
+            <li><a href="/chat/" class="button">Chat with Us!</a></li>
+            <li><a href="/login/" class="button">Account</a></li>
           </ul>
-          <!--<ul class="menu">
-            {% if user.is_authenticated %}
-                Welcome {{ user.username }}
-            {% else %}
-                Welcome Guest
-            {% endif %}
-          </ul>
-          <ul class="menu">
-            <li><a href="#">Account</a></li>
-            <li><a href="http://localhost:8000/signon.html" class="button">Sign</button></a></li>
-            <li><a href="http://localhost:8000/signon.html" class="button">LinkButtonTest</a></li>
-            <li><button type="button" class="alert button">ActionButtonTest</button></li>
-          </ul>-->
         </div>
-    </div>
-    <!-- End Top Nav Bar -->
+      </div>
 
-
+    <!--nav bar end -->
     {% block content %}{{body}}{% endblock %}
     <script src="{% static 'js/vendor.js' %}"></script>
     <script src="{% static 'js/foundation.js' %}"></script>
     {% block scripts %}{% endblock %}
-
 </body>
 
 </html>

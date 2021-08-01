@@ -1,23 +1,98 @@
 {% extends "base.html" %}
-{% load static %}
 
-{% block title %}{{title}}{% endblock %}
+{% block title %} {{title}} {% endblock %}
 
 {% block content %}
 
-<!--Start Form Container -->
-    <div class="grid-container">
 
-        <h5>Form Submission</h5>
-        <iframe title="Example 3" height="230" src="https://widget.airnow.gov/aq-dial-widget/?city=Imperial&state=CA&country=USA" style="border: none; border-radius: 25px;" width="230"></iframe>
-        {% if user.is_authenticated %}
-        <form action="/" method="post">
-            {% csrf_token %}
-            {{ form }}
-            <label for="submitbutton" class="button">Submit</label>
-            <input type="submit" id="submitbutton" class="show-for-sr">
-        </form>
-        {% endif %}
+<div class="grid-container">
+<div class="grid-x grid-margin-x" id="content" data-mutate="061vaf-sticky" data-events="mutate">
+          <div class="medium-9 cell">
+            <div class="blog-post">
+              <h3>Awesome blog post title <small>3/6/2016</small></h3>
+              <img class="thumbnail" src="https://placehold.it/850x350">
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+              <div class="callout">
+                <ul class="menu simple">
+                  <li><a href="#">Author: Mike Mikers</a></li>
+                  <li><a href="#">Comments: 3</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="blog-post">
+              <h3>Awesome blog post title <small>3/6/2016</small></h3>
+              <img class="thumbnail" src="https://placehold.it/850x350">
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+              <div class="callout">
+                <ul class="menu simple">
+                  <li><a href="#">Author: Mike Mikers</a></li>
+                  <li><a href="#">Comments: 3</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="blog-post">
+              <h3>Awesome blog post title <small>3/6/2016</small></h3>
+              <img class="thumbnail" src="https://placehold.it/850x350">
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+              <div class="callout">
+                <ul class="menu simple">
+                  <li><a href="#">Author: Mike Mikers</a></li>
+                  <li><a href="#">Comments: 3</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="blog-post">
+              <h3>Awesome blog post title <small>3/6/2016</small></h3>
+              <img class="thumbnail" src="https://placehold.it/850x350">
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+              <div class="callout">
+                <ul class="menu simple">
+                  <li><a href="#">Author: Mike Mikers</a></li>
+                  <li><a href="#">Comments: 3</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="medium-3 cell sticky-container" data-sticky-container="" style="height: 302px;">
+            <div class="sticky is-anchored is-at-top" data-sticky="" data-anchor="content" data-resize="061vaf-sticky" data-mutate="061vaf-sticky" data-e="sflriz-e" style="max-width: 270px; margin-top: 0px; bottom: auto; top: 0px;" data-events="mutate">
 
+            <h4>Air Quality</h4>    
+            <iframe 
+                title="Example 2" height="320" width="240" 
+                src="https://widget.airnow.gov/aq-dial-widget/?city=Imperial&state=CA&country=USA&transparent=true" 
+                style="border: none; border-radius: 25px;">
+            </iframe>
+            
+            <h4>Weather</h4>  
+            <a class="weatherwidget-io" 
+                href="https://forecast7.com/en/32d85n115d57/imperial/" 
+                data-label_1="IMPERIAL" data-label_2="WEATHER" 
+                data-theme="pure" >IMPERIAL WEATHER
+            </a>  
+            
+            <h4>Local News Sites</h4>
+              <ul>
+                <li><a href="https://www.ivpressonline.com">Imperial Valley Press</a></li>
+                <li><a href="https://www.thedesertreview.com">The Desert Review</a></li>
+                <li><a href="https://kyma.com/category/news/imperial-county/">KYMA Local News Station</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+
+<!--Weather Widget Script-->
+<script> 
+    !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){
+            js=d.createElement(s);js.id=id;
+            js.src='https://weatherwidget.io/js/widget.min.js';
+            fjs.parentNode.insertBefore(js,fjs);}
+    }(document,'script','weatherwidget-io-js');
+</script>
 
 {% endblock %}
