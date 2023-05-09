@@ -10,7 +10,7 @@ constantly==15.1.0
 cryptography==39.0.1
 daphne==3.0.2
 defusedxml==0.7.1
-Django==3.2.17
+Django==3.2.19
 hyperlink==21.0.0
 idna==3.2
 incremental==21.3.0
